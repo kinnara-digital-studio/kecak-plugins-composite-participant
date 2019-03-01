@@ -1,0 +1,38 @@
+[
+  {
+    title : 'Edit @@multiParticipant.multiParticipant@@',
+    properties :[
+      {
+        name : 'participant1',
+        label :'@@multiParticipant.participant1@@',
+        type : 'elementselect',
+        required :'true',
+        options_ajax : '[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.workflow.model.ParticipantPlugin',
+        url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+      },
+      {
+        name : 'participant2',
+        label :'@@multiParticipant.participant2@@',
+        type : 'elementselect',
+        required :'true',
+        options_ajax : '[CONTEXT_PATH]/web/property/json/getElements?classname=org.joget.workflow.model.ParticipantPlugin',
+        url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+      },
+      {
+        name : 'collectMode',
+        type : 'radio',
+        value : 'collectFromBoth',
+        options : [
+          {
+            value : 'collectBoth',
+            label :'Collect Both'
+          },
+          {
+            value : 'collectOne',
+            label :'Collect One'
+          }
+        ]
+      }
+    ]
+  }
+]
