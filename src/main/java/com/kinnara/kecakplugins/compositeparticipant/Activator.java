@@ -1,4 +1,4 @@
-package com.kinnara.kecakplugins.multiparticipant;
+package com.kinnara.kecakplugins.compositeparticipant;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -14,7 +14,7 @@ public class Activator implements BundleActivator {
         registrationList = new ArrayList<ServiceRegistration>();
 
         //Register plugin here
-        registrationList.add(context.registerService(MultiParticipant.class.getName(), new MultiParticipant(), null));
+        registrationList.add(context.registerService(CompositeParticipant.class.getName(), new CompositeParticipant(), null));
         registrationList.add(context.registerService(NobodyParticipant.class.getName(), new NobodyParticipant(), null));
     }
 

@@ -1,4 +1,4 @@
-package com.kinnara.kecakplugins.multiparticipant;
+package com.kinnara.kecakplugins.compositeparticipant;
 
 import org.joget.apps.app.model.AppDefinition;
 import org.joget.apps.app.service.AppUtil;
@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  *
  * Collect participant from multiple Participant Plugins
  */
-public class MultiParticipant extends DefaultParticipantPlugin {
+public class CompositeParticipant extends DefaultParticipantPlugin {
     @Override
     public String getName() {
         return "Multi Participant";
@@ -62,7 +62,7 @@ public class MultiParticipant extends DefaultParticipantPlugin {
 
     @Override
     public String getPropertyOptions() {
-        return AppUtil.readPluginResource(getClassName(), "/properties/MultiParticipant.json", null, false, "/messages/MultiParticipant");
+        return AppUtil.readPluginResource(getClassName(), "/properties/CompositeParticipant.json", null, false, "/messages/MultiParticipant");
     }
 
     /**

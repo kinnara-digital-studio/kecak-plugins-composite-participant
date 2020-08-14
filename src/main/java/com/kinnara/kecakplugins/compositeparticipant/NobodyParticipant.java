@@ -1,4 +1,4 @@
-package com.kinnara.kecakplugins.multiparticipant;
+package com.kinnara.kecakplugins.compositeparticipant;
 
 import org.joget.workflow.model.DefaultParticipantPlugin;
 
