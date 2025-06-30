@@ -1,4 +1,4 @@
-package com.kinnara.kecakplugins.compositeparticipant;
+package com.kinnarastudio.kecakplugins.compositeparticipant;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package com.kinnara.kecakplugins.compositeparticipant;
+package com.kinnarastudio.kecakplugins.compositeparticipant;
 
 import org.joget.apps.app.model.AppDefinition;
 import org.joget.apps.app.service.AppUtil;
@@ -9,10 +9,7 @@ import org.joget.workflow.model.DefaultParticipantPlugin;
 import org.joget.workflow.model.ParticipantPlugin;
 
 import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -21,14 +18,19 @@ import java.util.stream.Collectors;
  * Collect participant from multiple Participant Plugins
  */
 public class CompositeParticipant extends DefaultParticipantPlugin {
+    public final static String LABEL = "Composite Participant";
+
     @Override
     public String getName() {
-        return "Multi Participant";
+        return LABEL;
     }
 
     @Override
     public String getVersion() {
-        return getClass().getPackage().getImplementationVersion();
+        PluginManager pluginManager = (PluginManager) AppUtil.getApplicationContext().getBean("pluginManager");
+        ResourceBundle resourceBundle = pluginManager.getPluginMessageBundle(getClassName(), "/messages/BuildNumber");
+        String buildNumber = resourceBundle.getString("buildNumber");
+        return buildNumber;
     }
 
     @Override
@@ -52,7 +54,7 @@ public class CompositeParticipant extends DefaultParticipantPlugin {
 
     @Override
     public String getLabel() {
-        return getName();
+        return LABEL;
     }
 
     @Override
@@ -62,7 +64,7 @@ public class CompositeParticipant extends DefaultParticipantPlugin {
 
     @Override
     public String getPropertyOptions() {
-        return AppUtil.readPluginResource(getClassName(), "/properties/CompositeParticipant.json", null, false, "/messages/MultiParticipant");
+        return AppUtil.readPluginResource(getClassName(), "/properties/CompositeParticipant.json", null, false, "/messages/Composite");
     }
 
     /**
