@@ -7,6 +7,12 @@
     <version>4.0.0</version>
     <name>kecak-plugins-composite-participant</name>
     <url>http://www.kecak.org</url>
+    <scm>
+        <connection>scm:git:ssh://git@github.com:kinnara-digital-studio/kecak-plugins-composite-participant.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:kinnara-digital-studio/kecak-plugins-composite-participant.git</developerConnection>
+        <url>ssh://git@github.com:kinnara-digital-studio/kecak-plugins-composite-participant.git</url>
+        <tag>HEAD</tag>
+    </scm>
     <build>
         <plugins>
             <plugin>
